@@ -12,16 +12,6 @@ int LenAr(string[] arr)
     return count;
 }
 
-void FillArray(string[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.WriteLine("Введите элемент массива: ");
-        string elem = Console.ReadLine();
-        array[i] = elem;
-    }
-}
-
 void CorrectArray(string[] array, string[] Corarr)
 {
     int k = 0;
@@ -47,10 +37,9 @@ void PrintArr(string[] arr)
 }
 
 
-Console.WriteLine("Укажите размер массива: ");
-int l = Convert.ToInt32(Console.ReadLine());
-string[] array = new string[l];
-FillArray(array);
+Console.WriteLine("Вводите элементы массива черезе пробел");
+string input = Console.ReadLine();
+string[] array = input.Split(" ");
 int count = LenAr(array);
 string[] CorArray = new string [count];
 CorrectArray(array, CorArray);

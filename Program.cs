@@ -32,6 +32,8 @@ void PrintArr(string[] arr)
     for (int m = 0; m < arr.Length; m++)
     {
         Console.Write($"'{arr[m]}'");
+        if (m != arr.Length - 1)
+            Console.Write(",");
     }
 
 }

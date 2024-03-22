@@ -17,10 +17,9 @@ void CorrectArray(string[] array, string[] Corarr)
     int k = 0;
     for (int j = 0; j < array.Length; j++)
     {
-        string el = array[j];
-        if (el.Length <= 3)
+        if (array[j].Length <= 3)
         {
-            Corarr[k] = el;
+            Corarr[k] = array[j];
             k++;
         }
     }
